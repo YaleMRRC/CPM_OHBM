@@ -1,0 +1,5 @@
+The Matlab script files are examples used in the "How-to CPM" tutorial by Xilin Shen. The paper "Using connectome-based predictive modeling to predict individual behavior from brain connectivity" published in Nature Protocols describes the original CPM protocol.
+codeshare_behavioralprediction.m implements the connectome based model to predict a behavioral measure, in a leave-one-subject-out scheme. 
+permutation_test_example.m estimates the significance of the test statistics, which is the model performance. 1000 CPM models are built based on randomly shuffled pairing between the connectome and the dependent variable, to generate the distribution of the test statistics. The statistical significance of the true model is calculated as the percentage of cases exceeding the performance of the true model.
+cpm_kfold_test_example.m demonstrates how to run CPM using K-fold cross validation. The code outputs the binary masks of the connections which can be visualized using tools available at https://bioimagesuiteweb.github.io/webapp/connviewer.html?species=human#
+

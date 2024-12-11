@@ -60,9 +60,9 @@ output_flg = 1;
 
 if( output_flg==1)
     [sort_v, sort_id ] = sort(all_r);
-    half_fold = round(no_fold/2);
-    out_pos = pos_mat{ sort_id(half_fold)};
-    out_neg = neg_mat{ sort_id(half_fold)};
+    half_iter = round(no_iter/2);
+    out_pos = pos_mat{ sort_id(half_iter)};
+    out_neg = neg_mat{ sort_id(half_iter)};
     % save the positive edge mask and the negative edge mask
     dlmwrite('cpm_kfold_test_pos_mask', out_pos, 'delimiter', '\t');
     dlmwrite('cpm_kfold_test_neg_mask', out_neg, 'delimiter', '\t');
